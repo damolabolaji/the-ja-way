@@ -40,6 +40,8 @@ class Character {
     this.health = health;
     this.strength = strength;
     this.xp = 0;
+    this.gold = 10;
+    this.key = 1;
   }
 
   //create 'attack' method to attack target and cause damage
@@ -62,6 +64,8 @@ class Character {
         console.log(
           `${target.name} has been eliminated and won ${bonuxXP} experience points`
         );
+        this.gold += target.gold;
+        this.key += target.key;
       }
     }
     //else they cant, tell the user
@@ -70,7 +74,7 @@ class Character {
 
   // Return the character description
   describe() {
-    return `${this.name} has ${this.health} health points, ${this.strength} as strength and ${this.xp} XP points`;
+    return `${this.name} has ${this.health} health points, ${this.strength} as strength and ${this.xp} XP points. Character Inventory: ${this.gold} gold coins & ${this.key} keys`;
   }
 }
 
@@ -80,6 +84,7 @@ const gustus = new Character("Gustus", 170, 50);
 const monster = new Character("bobo", 50, 20);
 
 monster.attack(ladida);
+ladida.attack(monster);
 ladida.attack(monster);
 
 console.log(ladida.describe());
