@@ -114,3 +114,25 @@ console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
 const snowy = new Dog("Snowy", "terrier", 22);
 console.log(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
 console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
+
+//ACCOUNT BALANCE
+
+class AccountName {
+  constructor(name, balance) {
+    this.name = name;
+    this.balance = balance;
+  }
+  credit(num) {
+    this.balance += num;
+  }
+  describe() {
+    return `${this.name} has ${this.balance}`;
+  }
+}
+
+const amara = new AccountName("Amara", 900);
+const koko = new AccountName("Koko", 700);
+console.log(amara.describe());
+
+amara.credit(100);
+console.log(amara.describe());
