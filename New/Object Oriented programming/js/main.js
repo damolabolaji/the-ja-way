@@ -118,7 +118,7 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 //ACCOUNT BALANCE
 
 class AccountName {
-  constructor(name, balance) {
+  constructor(name, balance = 0) {
     this.name = name;
     this.balance = balance;
   }
@@ -136,3 +136,32 @@ console.log(amara.describe());
 
 amara.credit(100);
 console.log(amara.describe());
+
+//account object from previous exercise
+// let theAccount = {
+//   name: "Alex Madu",
+//   balance: 0,
+//   credit(num) {
+//     return (this.balance += num);
+//   },
+//   describe() {
+//     return `Account holder: ${this.name}\nbalance is $${this.balance}`;
+//   },
+// };
+
+//A program that creates three accounts brad, george and sean
+
+function whatTheHell(name1, name2, name3) {
+  const brad = new AccountName(name1);
+  const george = new AccountName(name2);
+  const sean = new AccountName(name3);
+  //store the accounts in an array
+  let arrayOfAccounts = [brad, george, sean];
+  //add 1000 to each account
+  arrayOfAccounts.forEach((item) => {
+    item.credit(1000);
+    console.log(item.describe());
+  });
+  return arrayOfAccounts;
+}
+console.log(whatTheHell());
