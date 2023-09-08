@@ -69,3 +69,6 @@ class Character {
     return `${this.name} has ${this.health} health points, ${this.strength} as strength and ${this.xp} XP points`;
   }
 }
+
+const ladida = new Character("Ladida", 150, 40);
+const gustus = new Character("Gustus", 170, 50);
