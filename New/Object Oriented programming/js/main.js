@@ -49,7 +49,11 @@ class Character {
       const damage = this.strength;
       target.health -= damage;
       //console.log the player's stats
+      console.log(
+        `${this.name} attacks ${target.name} causing ${damage} points`
+      );
       console.log(`${target.name} has ${target.health} health points left`);
+
       if (target.health < 0) {
         target.health = 0;
         const bonuxXP = 10;
@@ -72,3 +76,8 @@ class Character {
 
 const ladida = new Character("Ladida", 150, 40);
 const gustus = new Character("Gustus", 170, 50);
+
+const monster = new Character("bobo", 50, 20);
+
+monster.attack(ladida);
+ladida.attack(monster);
