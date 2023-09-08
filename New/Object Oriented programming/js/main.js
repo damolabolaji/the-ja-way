@@ -81,3 +81,31 @@ const monster = new Character("bobo", 50, 20);
 
 monster.attack(ladida);
 ladida.attack(monster);
+
+console.log(ladida.describe());
+console.log(monster.describe());
+
+//ADD DOG CONSTRUCTOR
+// TODO: define the Dog class here
+
+class Dog {
+  constructor(name, species, size) {
+    this.name = name;
+    this.species = species;
+    this.size = size;
+  }
+
+  bark() {
+    if (this.size > 60) {
+      return `GRR Grr`;
+    } else return `woof, woof`;
+  }
+}
+
+const fang = new Dog("Fang", "boarhound", 75);
+console.log(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
+console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
+
+const snowy = new Dog("Snowy", "terrier", 22);
+console.log(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
+console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
