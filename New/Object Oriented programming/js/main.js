@@ -151,7 +151,7 @@ console.log(amara.describe());
 
 //A program that creates three accounts brad, george and sean
 
-function whatTheHell(name1, name2, name3) {
+function makeThisAccounts(name1, name2, name3) {
   const brad = new AccountName(name1);
   const george = new AccountName(name2);
   const sean = new AccountName(name3);
@@ -164,4 +164,4 @@ function whatTheHell(name1, name2, name3) {
   });
   return arrayOfAccounts;
 }
-console.log(whatTheHell());
+console.log(whatTheHell("bard", "gerg", "son"));
