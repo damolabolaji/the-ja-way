@@ -164,4 +164,4 @@ function makeThisAccounts(name1, name2, name3) {
   });
   return arrayOfAccounts;
 }
-console.log(whatTheHell("bard", "gerg", "son"));
+console.log(makeThisAccounts("bard", "gerg", "son"));
